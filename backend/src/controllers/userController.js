@@ -20,3 +20,19 @@ exports.createUser = async (req, res) => {
         })
     }
 }
+
+exports.getAllUsers = async (req, res) => {
+    try {
+        const allUsers = await connection('users').select('*');
+
+        res.status(200).json({
+            status: 'success',
+            allUsers
+        })
+    } catch {
+        res.status(400).json({
+            status: 'fail',
+            message: error
+        })
+    }
+}
