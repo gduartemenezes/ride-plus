@@ -1,12 +1,40 @@
 // Main modules
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 // Assets
 import './styles.css';
+import logo from '../../assets/logo.png'
+import loginImg from '../../assets/loginImg.png';
+import { FiLogIn } from 'react-icons/fi';
+
 
 export default function Logon () {
     return (
-        <h1>This is logon</h1>
+        <div className='container-logon'>
+            <section className='form'>
+                <img src={logo} className='logo' alt='Rides plus Logo' />
+                <form>
+                    <h1> Access your account.</h1>
+                    <input 
+                        type='text'
+                        placeholder='Your ID'
+                        
+                        />
+                    <button className="btn btn-login">
+                        Log in
+                    </button>
+
+                    <Link className='link' to='/register'>
+                        <FiLogIn  /> 
+                        <FiLogIn size={16} color="#E02041" />
+                        I don't have an account
+                    </Link>
+                </form>
+            </section>
+            <img src={loginImg} alt="Login Image" className="login"/>
+
+        </div>       
     );
 }
+
