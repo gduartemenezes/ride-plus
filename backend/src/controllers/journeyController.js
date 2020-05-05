@@ -25,8 +25,17 @@ exports.createJourney = async (req,res) => {
 
 exports.getAllJourneys = async (req, res) => {
     try {
-        const allJourneys = await connection('journeys').select('*');
+        const allJourneys = await connection('journeys')
+            .join('users', 'users.id', '=', 'journeys.user_id')
+            .select([
+                'journeys.*',
+                'users.name',
+                'users.email',
+                'users.whatsapp',
+                'users.city',
+            ]);
 
+        res.headers('X-Total-Count', allJourneys.length);
         res.status(200).json({
             status: 'success',
             allJourneys
