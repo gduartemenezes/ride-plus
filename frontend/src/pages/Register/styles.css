@@ -1,0 +1,47 @@
+.container-register {
+    width: 100%;
+    max-width: 1040px;
+    margin: 125px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.container-register section.cover {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto 50px 100px;
+}
+
+.container-register section.form {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.container-register section.form form {
+    display: inline-block;
+}
+
+.container-register section.cover h1 {
+    font-size: 180%;
+    font-weight: 400;
+}
+
+.container-register section.form input {
+    margin-bottom: 10px;
+}
+
+.container-register section.form .location {
+    display: flex;
+}
+
+.container-register section.form .location input+input {
+    margin-left: 8px;
+}
+
+section.cover img {
+    height: 250px;
+    width: auto;
+}

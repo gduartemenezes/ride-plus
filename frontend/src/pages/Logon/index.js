@@ -26,8 +26,7 @@ export default function Logon () {
                     </button>
 
                     <Link className='link' to='/register'>
-                        <FiLogIn  /> 
-                        <FiLogIn size={16} color="#E02041" />
+                        <FiLogIn size={18}/> 
                         I don't have an account
                     </Link>
                 </form>
